@@ -20,6 +20,7 @@ class Base(Configuration):
         'django.contrib.staticfiles',
         # my apps
         'main',
+        'order',
         # added to use
         'rest_framework',
     ]
