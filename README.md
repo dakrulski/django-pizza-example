@@ -1,5 +1,5 @@
 # Test-Project
-This is a project to show i'm confident with python/django.
+This is a project to show I'm confident with python/django.
 
 ## The task
 >Imagine a pizza ordering services with following functionality:
@@ -17,10 +17,43 @@ This is a project to show i'm confident with python/django.
 >	-  You don’t have to implement any UI, just the API endpoints
 >3. Write test(s) for at least one of these endpoint(s)
 
->After you are done, push your code to a public repository and send us a link.
+## Installation
+Clone this git repository:
+```
+git clone https://github.com/dakrulski/django-pizza-example.git
+```
+Create a python virtual enviroment for python3 and activate it.
 
-## Things I would have done differently for production
-- definitely implement authorization and authentication
-- Use webpack to have only one JS-File and manage all the different versions of the frameworks
-- The models, because normally I would make it more complex, for example: add an address model to customer etc.
+Go to the project folder:
+```
+cd pizza
+```
+Install the requirements:
+```
+pip install -r requirements.txt
+```
+Run the migrations:
+```
+python manage.py migrate
+```
+Start the server:
+```
+python manage.py runserver
+```
+This will start the webserver on http://127.0.0.1:8000/.
+## Documentation
+An automatic generated interactive API documentation can be found under http://127.0.0.1:8000/docs/ if the server is running.
+
+The API endpoints are:
+
+| Endpoint   | Description |
+|------------|-----------|
+| /order/list/\<customer\>/ | to list the orders from a customer |
+| /order/create/ | to create a new order |
+| /modify/\<int:pk\>/ | to update and delete an order |
+
+## If I had more time, these are the things I would have done differently
+- Definitely implement authorization and authentication
+- Make the models more complex. For example add a customer model with a referenced address model, add a model for different pizza sizes and add a model for prices with reference to the size model and to the pizza model.
+
 
