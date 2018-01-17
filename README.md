@@ -1,7 +1,7 @@
 # Test-Project
-This is a project to show I'm confident with python/django.
+This is a simple project to show I'm confident with python/django.
 
-## The task
+## The given task
 >Imagine a pizza ordering services with following functionality:
 
 >- Order pizza . Order data: pizza id, pizza size (30cm/50cm), customer name, customer address (just plain text)
@@ -42,15 +42,20 @@ python manage.py runserver
 ```
 This will start the webserver on http://127.0.0.1:8000/.
 ## Documentation
-An automatic generated interactive API documentation can be found under http://127.0.0.1:8000/docs/ if the server is running.
-
 The API endpoints are:
 
 | Endpoint   | Description |
 |------------|-----------|
-| /order/list/\<customer\>/ | to list the orders from a customer |
+| /order/list/\<customer name\>/ | to list the orders from a customer |
 | /order/create/ | to create a new order |
-| /modify/\<int:pk\>/ | to update and delete an order |
+| /modify/\<pizza id\>/ | to update and delete an order |
+
+An automatic generated interactive API documentation can be found under http://127.0.0.1:8000/docs/ if the server is running.
+## Tests
+To run the tests:
+```
+python manage.py test
+```
 
 ## If I had more time, these are the things I would have done differently
 - Definitely implement authorization and authentication
