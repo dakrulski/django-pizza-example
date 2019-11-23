@@ -1,4 +1,4 @@
-# Test-Project
+# Test-Project for Pizza order
 This is a simple project to show I'm confident with python/django.
 
 ## The given task
